@@ -14,9 +14,9 @@ const config: Config = {
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.svg",
   url: "https://datadata-team.github.io",
-  baseUrl: "/datadata-docs/",
+  baseUrl: "/datadata-com-docs/",
   organizationName: "datadata-team",
-  projectName: "datadata-docs",
+  projectName: "datadata-com-docs",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   i18n: {
