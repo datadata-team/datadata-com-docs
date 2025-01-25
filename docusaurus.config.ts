@@ -39,7 +39,7 @@ const config: Config = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          editUrl: "https://github.com/hungtcs/datadata-docs/tree/master/",
+          editUrl: "https://github.com/hungtcs/datadata-com-docs/tree/master/",
           sidebarPath: "./sidebars-docs.ts",
           routeBasePath: "docs",
           showLastUpdateTime: true,
@@ -114,7 +114,7 @@ const config: Config = {
       {
         id: "development",
         path: "development",
-        editUrl: "https://github.com/hungtcs/datadata-docs/tree/master/",
+        editUrl: "https://github.com/hungtcs/datadata-com-docs/tree/master/",
         sidebarPath: "./sidebars-development.ts",
         routeBasePath: "development",
         showLastUpdateTime: true,
@@ -222,7 +222,7 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
   stylesheets: [
     {
-      href: "/datadata-docs/lib/katex-v0.16.11/katex.min.css",
+      href: "/datadata-com-docs/lib/katex-v0.16.11/katex.min.css",
       type: "text/css",
     },
   ],
