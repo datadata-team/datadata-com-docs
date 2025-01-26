@@ -26,14 +26,13 @@ sidebar_position: 2.5
 ### 数据示例
 
 ```py
-data = query("select * from derive.f_daily_quotes where day = '2024-12-17' ")
-info = query("select product_name, contract_size from public.product_info where futures_type = '期货'")
+# 创建 DataFrame
+data = {
+    "Coin": ["BTC", "ETH", "SOL", "DOGE", "LTC"],
+    "MarketValue": [100, 30, 70, 20, 100]
+}
 
-mergeda = data.merge(info,'left','product_name')
-mergeda['volume_value'] = mergeda['settlement_price'] * mergeda['contract_size'] * mergeda['volume']
-groupda = mergeda.groupby('product_name').sum(numeric_only=True)
-groupda = groupda.sort_values('volume_value')
-return groupda
+return data
 ```
 
 
