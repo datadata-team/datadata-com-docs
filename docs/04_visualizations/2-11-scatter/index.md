@@ -27,9 +27,7 @@ sidebar_position: 2.11
 例如，以下是获取数据的 SQL 查询：
 
 ```sql
-SELECT * 
-FROM yearly.a0201 
-WHERE name = '国民总收入亿元';
+select toDateTime(Time/1000) as Time, * from klines.spot_1d where Symbol = 'btc_usdt' and Exchange = 'Binance' order by Time limit 100
 ```
 
 ### 显示设置
