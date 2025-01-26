@@ -26,7 +26,7 @@ sidebar_position: 2.6
 ### 数据示例
 
 ```py
-select day, closing_price from derive.f_daily_quotes where contract = 'RB2505' order by day;
+select toDateTime(Time/1000) as Time, * from klines.spot_1d where Symbol = 'btc_usdt' and Exchange = 'Binance' order by Time limit 100
 ```
 
 
