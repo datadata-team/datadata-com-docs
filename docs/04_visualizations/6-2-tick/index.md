@@ -18,7 +18,7 @@ sidebar_position: 6.2
 ### 数据示例
 
 ```py
-select * from market.rb where symbol = 'rb2505' order by timestamp DESC limit 10000
+select * from market.binance where symbol = 'btc_usdt' limit 10000
 ```
 
 ## 盘口实时回放设置
