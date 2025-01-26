@@ -34,7 +34,7 @@ sidebar_position: 2.13
 # 创建 DataFrame
 data = {
     "Parent": ["多", "多", "多", "空", "空"],
-    "Node": ["螺纹钢", "纯碱", "玻璃", "乙二醇", "花生"],
+    "Node": ["BTC", "ETH", "SOL", "DOGE", "LTC"],
     "Value": [100, 30, 70, 20, 100]
 }
 
