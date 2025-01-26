@@ -21,9 +21,10 @@ sidebar_position: 3.4
 ### 数据示例
 
 ```py
+# 创建 DataFrame
 data = {
-    'product_code': ['螺纹钢', '铁矿石', '热卷', '焦煤', '焦炭'],  # 5个品种
-    'inmoney': [15, 10, 7, 2, 5]  # 流入金额
+    "Coin": ["BTC", "ETH", "SOL", "DOGE", "LTC"],
+    "MarketValue": [100, 90, 70, 20, 40]
 }
 
 return data
