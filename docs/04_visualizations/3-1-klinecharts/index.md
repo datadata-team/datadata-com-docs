@@ -26,9 +26,7 @@ K 线图适用于展示金融市场的价格变动情况，特别适用于分析
 ### 数据示例
 
 ```py
-data = query("select * from derive.f_daily_quotes WHERE product_name = '螺纹钢' and contract = 'RB2501' ")
-
-return data.sort_values('day')
+select toDateTime(Time/1000) as Time, * from klines.spot_1d where Symbol = 'btc_usdt' and Exchange = 'Binance' order by Time limit 100
 ```
 
 
