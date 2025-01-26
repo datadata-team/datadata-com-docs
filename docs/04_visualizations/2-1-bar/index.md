@@ -25,16 +25,7 @@ sidebar_position: 2.1
 2. 系列字段需要为数值类型
 
 ```sql
-# 创建 DataFrame
-data = query('select * from yearly.a0806')
-
-# 转换为 DataFrame
-df = DataFrame(data)
-
-df = df.pivot(index="day", columns="name", values="value")
-
-# 查看数据
-return df.sort_values('day') 
+select toDateTime(Time/1000) as Time, * from klines.spot_1d where Symbol = 'btc_usdt' and Exchange = 'Binance' order by Time limit 100
 ```
 
 ## 显示设置
