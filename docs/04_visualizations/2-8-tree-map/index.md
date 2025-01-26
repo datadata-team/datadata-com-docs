@@ -27,19 +27,7 @@ sidebar_position: 2.8
 ### 数据示例
 
 ```py
-info = query("select product_name, contract_size from public.product_info where futures_type = '期货'")
-data = query("select * from derive.f_daily_quotes where day = '2024-12-16'")
-
-product_list = list(info['product_name'])
-seldata = data[data['product_name'].apply(lambda x : x in product_list)]
-
-mergedata = data.merge(info, 'inner', 'product_name')
-
-mergedata['market_value'] = mergedata['settlement_price'] * mergedata['open_interest'] * mergedata['contract_size']/100000000
-
-groupdata = mergedata.groupby('product_name').sum(numeric_only = True)
-
-return groupdata
+select toDateTime(Time/1000) as Time, Volume * Close as MarketValue,  * from klines.spot_1d where Symbol like '%usdt' and Exchange = 'Binance' order by Time desc, MarketValue desc limit 100
 ```
 
 
