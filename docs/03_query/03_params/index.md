@@ -147,6 +147,3 @@ return query('select * from {{ table }} where id = {{ id }}')
 
 
 
-效果如下
-
-![params order](./01_params_order.png)
