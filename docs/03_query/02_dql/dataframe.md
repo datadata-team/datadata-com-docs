@@ -14,7 +14,7 @@ sidebar_position: 3
 ### 查询创建
 
 ```py
-d1 = query("select * from daily_quotes.dqf where product_id = 'FG' limit 100")
+d1 = query("select * from klines.future_15m limit 100")
 return d1
 ```
 
@@ -75,7 +75,7 @@ return d.empty #空的 DataFrame ，返回"True"
 `query` 返回的数据并非都是完整的数据（最多支持 10000 行），可使用该属性进行判断指示是否还有更多的内容可供处理或迭代：`Type bool`
 
 ```py
-data = query("select * from shfe.f_position_ranking")
+data = query("select * from klines.future_15m")
 return data.has_more #存在更多内容，返回"True"
 ```
 
